@@ -1,0 +1,33 @@
+<p>{{ class }}</p>
+@if(class){
+<table>
+  <thead>
+    <tr>
+      <td>#</td>
+      <td>Lvl</td>
+      <td>Name</td>
+      <td>School</td>
+      <td>Casting Time</td>
+      <td>Range</td>
+      <td>Components</td>
+      <td>Duration</td>
+    </tr>
+  </thead>
+  <tbody>
+    @for(spell of spellList;track $index){
+    <tr>
+      <td>{{ $index + 1 }}</td>
+      <td>{{ spell._level }}</td>
+      <td>{{ spell._name }}</td>
+      <td>{{ spell._school }}</td>
+      <td>{{ spell._castingTime }}</td>
+      <td>{{ spell._range }}</td>
+      <td>{{ spell._components }}</td>
+      <td>{{ spell._duration }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
+}@else{
+<p>Spell List is empty</p>
+}

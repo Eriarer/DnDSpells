@@ -1,1 +1,5 @@
-<p>navbar works!</p>
+<div class="files">
+  @for(classs of classList; track classs){
+  <button (click)="selectClass(classs)">{{ classs }}</button>
+  }
+</div>
